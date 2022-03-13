@@ -6,7 +6,7 @@ authors = ["Silva Ndoja <silvandoja1@gmail.com>", "Ilias Antonopoulos <ilias.ant
 readme = "README.md"
 license = "MIT"
 repository = "https://github.com/ilias-ant/x-ray-abnormality-detection"
-keywords = ["deep-learning", "cnn-classification", "mlp-classification", "fashion-mnist"]
+keywords = ["deep-learning", "image-classification", "mura-dataset", "stanford-ml-group"]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
