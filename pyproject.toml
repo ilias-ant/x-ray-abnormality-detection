@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "x-ray-abnormality-detection"
+version = "0.1.0"
+description = "An attempt at the Bone X-Ray Deep Learning Competition (Stanford ML Group)"
+authors = ["Silva Ndoja <silvandoja1@gmail.com>", "Ilias Antonopoulos <ilias.antonopoulos@yahoo.gr>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/ilias-ant/x-ray-abnormality-detection"
+keywords = ["deep-learning", "cnn-classification", "mlp-classification", "fashion-mnist"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+
+[tool.poetry.dev-dependencies]
+notebook = "^6.4.8"
+black-nb = "^0.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

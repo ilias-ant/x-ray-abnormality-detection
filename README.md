@@ -4,6 +4,8 @@
 
 An attempt at the Bone X-Ray Deep Learning Competition (Stanford ML Group).
 
+<img src="static/dataset.png" width="100%">
+
 ## Installation
 
 To enable reproducibility, [Poetry](https://python-poetry.org/) has been used as a dependency manager.
