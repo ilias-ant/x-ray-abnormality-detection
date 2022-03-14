@@ -4,7 +4,7 @@
 
 An attempt at the Bone X-Ray Deep Learning Competition (Stanford ML Group).
 
-<img src="static/dataset.png" width="100%">
+<img src="static/mura-cam3.svg" width="100%">
 
 ## Installation
 
