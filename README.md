@@ -4,7 +4,7 @@
 
 An attempt at the Bone X-Ray Deep Learning Competition (Stanford ML Group).
 
-From the paper (see Cittion below):
+From the paper (see Citation below):
 
 > The MURA abnormality detection task is a binary classification task, where the input is an upper exremity radiograph study — with each study containing one or more views (images) — and the expected output is a binary label y ∈ {0, 1} indicating whether the study is normal or abnormal,
 respectively.
