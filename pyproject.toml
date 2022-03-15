@@ -11,6 +11,8 @@ keywords = ["deep-learning", "image-classification", "mura-dataset", "stanford-m
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
 
+tensorflow = "2.8.0"
+
 [tool.poetry.dev-dependencies]
 notebook = "^6.4.8"
 black-nb = "^0.7"
