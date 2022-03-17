@@ -15,6 +15,9 @@ tensorflow = "2.8.0"
 keras-tuner = "1.1.0"
 pandas = "1.4.1"
 plotnine = "^0.8.0"
+pydot = "^1.4.2"
+graphviz = "^0.19.1"
+scikit-learn = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
 notebook = "^6.4.8"
