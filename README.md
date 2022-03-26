@@ -9,7 +9,7 @@ From the paper (see Citation below):
 > The MURA abnormality detection task is a binary classification task, where the input is an upper exremity radiograph study — with each study containing one or more views (images) — and the expected output is a binary label y ∈ {0, 1} indicating whether the study is normal or abnormal,
 respectively.
 
-<img src="static/mura-sample-images.png" width="100%" text="https://www.researchgate.net/figure/Sample-images-from-MURA-dataset_fig2_348282230">
+<img src="static/mura-sample-images.png" width="99%" text="https://www.researchgate.net/figure/Sample-images-from-MURA-dataset_fig2_348282230">
 
 ## Installation
 
