@@ -1,5 +1,6 @@
+# dataset
 MURA-*
+# augmentation purposes
 augmented
-
 # tensorboard logs
 logs/
