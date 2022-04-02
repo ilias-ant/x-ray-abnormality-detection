@@ -1,3 +1,6 @@
+"""
+A module that contains various utilities for the notebooks, in order to reduce the amount of code duplication.
+"""
 import gc
 from typing import Iterable
 
@@ -45,6 +48,25 @@ def study_oriented_transformation(dataset: pd.DataFrame) -> Iterable:
 
         study_label = group["label"].values.take(0)
         study_prediction = 1 if group["prediction"].mean() > 0.5 else 0
+
+        yield study_type, study_path, study_label, study_prediction
+
+        
+def study_oriented_transformation_on_ensemble(dataset: pd.DataFrame) -> Iterable:
+    """
+    Transforms a dataset into a study-oriented format, to be able to perform per-study evaluation on ensemble models.
+    The dataset is expected to have the following columns:
+        * study_path: the path to the study.
+        * label: the label of the study (e.g. 1 for positive, 0 for negative).
+        * predictionA: the prediction of model A (e.g. a probability).
+        * predictionB: the prediction of model A (e.g. a probability).
+    """
+    for (study_type, study_path), group in dataset.groupby(["study_type", "study_path"]):
+
+        study_label = group["label"].values.take(0)
+        ensemble_prediction = group["predictionA"].mean() + group["predictionB"].mean()
+        # note that condition is now p > 1.0, since we have added individual mean predictions
+        study_prediction = 1 if ensemble_prediction > 1.0 else 0
 
         yield study_type, study_path, study_label, study_prediction
 
