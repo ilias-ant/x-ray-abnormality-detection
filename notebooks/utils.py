@@ -41,12 +41,12 @@ def study_oriented_transformation(dataset: pd.DataFrame) -> Iterable:
         * label: the label of the study (e.g. 1 for positive, 0 for negative).
         * prediction: the model prediction (e.g. a probability).
     """
-    for study, group in dataset.groupby("study_path"):
+    for (study_type, study_path), group in dataset.groupby(["study_type", "study_path"]):
 
         study_label = group["label"].values.take(0)
         study_prediction = 1 if group["prediction"].mean() > 0.5 else 0
 
-        yield study, study_label, study_prediction
+        yield study_type, study_path, study_label, study_prediction
 
 
 def inspect_df(df: pd.DataFrame, n: int = 5) -> pd.DataFrame:
