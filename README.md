@@ -11,6 +11,20 @@ respectively.
 
 <img src="static/mura-sample-images.png" width="99%" text="https://www.researchgate.net/figure/Sample-images-from-MURA-dataset_fig2_348282230">
 
+## Results
+
+We report our findings on the Cohen’s kappa statistic, which expresses the agreement of the model with the gold standard. This is the metric used in the competition as well.
+
+| model | Overall | Shoulder | Elbow | Humerus | Hand | Wrist | Forearm | Finger |
+| --- | --- | --- | --- | --- | --- | --- | --- |--- |
+|CNN (sc) |0.386 | 0.17 | 0.50 | 0.44 | 0.18 | 0.51 | 0.44 | 0.37|
+| ens: CNN + wrist-CNN (sc) |0.400 | 0.17 | 0.50 | 0.44 | 0.18 | 0.58 | 0.44 | 0.37|
+|DenseNet-169 (pt) | **0.629** | 0.54 | 0.72 | 0.72 | 0.43 | 0.71 | 0.65 | 0.59|
+|VGG-19 (pt) |0.598 | 0.51 | 0.67 | 0.7 | 0.42 | 0.67 | 0.62 | 0.56|
+| ens: DenseNet-169 + VGG-19| **0.629** | 0.57 | 0.7 | 0.73 | 0.45 | 0.7 | 0.63 | 0.58|
+
+*(pt): pre-trained | (sc): trained from scratch.
+
 ## Installation
 
 To enable reproducibility, [Poetry](https://python-poetry.org/) has been used as a dependency manager.
