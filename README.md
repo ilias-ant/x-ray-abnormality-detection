@@ -13,6 +13,8 @@ respectively.
 
 ## Results
 
+We have used the MURA v1.1 dataset. 
+
 We report our findings on the Cohen’s kappa statistic, which expresses the agreement of the model with the gold standard. This is the metric used in the competition as well.
 
 | model | Overall | Shoulder | Elbow | Humerus | Hand | Wrist | Forearm | Finger |
@@ -29,6 +31,8 @@ We report our findings on the Cohen’s kappa statistic, which expresses the agr
 *(pt): pre-trained | (sc): trained from scratch.
 
 ## Installation
+
+You will at the very least need a local copy of the [MURA dataset](https://stanfordmlgroup.github.io/competitions/mura/): download the dataset version (e.g. `v1.1`) you want to use and place it in the `data` folder (e.g. `data/MURA-v1.1/`).
 
 To enable reproducibility, [Poetry](https://python-poetry.org/) has been used as a dependency manager.
 
